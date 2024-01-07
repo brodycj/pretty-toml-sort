@@ -3,7 +3,7 @@ name: Testing
 on:
   push:
     branches:
-      - main
+      - dev
   pull_request:
 
 jobs:
@@ -27,19 +27,19 @@ jobs:
           poetry install
 
       - name: Run black formatter check
-        run: poetry run black --check --diff toml_sort tests
+        run: poetry run black --check --diff pretty_toml_sort tests
 
       - name: Run docformatter check
-        run: poetry run docformatter --check --recursive toml_sort tests
+        run: poetry run docformatter --check --recursive pretty_toml_sort tests
 
       - name: Run isort check
-        run: poetry run isort --check toml_sort tests
+        run: poetry run isort --check pretty_toml_sort tests
 
       - name: Run mypy check
-        run: poetry run mypy toml_sort
+        run: poetry run mypy pretty_toml_sort
 
       - name: Run pylint
-        run: poetry run pylint toml_sort tests
+        run: poetry run pylint pretty_toml_sort tests
 
   tests:
     needs: [lint]
@@ -91,4 +91,4 @@ jobs:
       - name: Run Coverage
         env:
           WITH_COVERAGE: true
-        run: poetry run pytest --cov=toml_sort --cov-report=term-missing tests
+        run: poetry run pytest --cov=pretty_toml_sort --cov-report=term-missing tests

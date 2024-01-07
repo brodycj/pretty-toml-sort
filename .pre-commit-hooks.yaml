@@ -1,12 +1,12 @@
--   id: toml-sort
-    name: toml-sort
-    entry: toml-sort
+-   id: pretty-toml-sort
+    name: pretty-toml-sort
+    entry: pretty-toml-sort
     args: [--check]
     language: python
     types: [toml]
--   id: toml-sort-fix
-    name: toml-sort-fix
-    entry: toml-sort
+-   id: pretty-toml-sort-fix
+    name: pretty-toml-sort-fix
+    entry: pretty-toml-sort
     args: [--in-place]
     language: python
     types: [toml]

@@ -12,13 +12,16 @@ multi_line_output = 3
 include_trailing_comma = true
 
 [tool.poetry]
-name = "toml-sort"
-version = "0.23.1"
+name = "pretty-toml-sort"
+version = "0.0.0+dev"
 description = "Toml sorting library"
-authors = ["Sam Roeca <samuel.roeca@gmail.com>"]
+authors = [
+  "Sam Roeca <samuel.roeca@gmail.com>",
+  "Christopher J. Brody <chris.brody+brodybits@gmail.com>"
+]
 readme = "README.md"
-homepage = "https://toml-sort.readthedocs.io/en/latest/"
-repository = "https://github.com/pappasam/toml-sort"
+homepage = "https://github.com/brodybits/pretty-toml-sort"
+repository = "https://github.com/brodybits/pretty-toml-sort"
 keywords = ["toml", "sort", "cli", "unix", "utility"]
 classifiers = [
   "Development Status :: 3 - Alpha",
@@ -51,7 +54,7 @@ docformatter = ">=1.5.1"
 pytest-cov = ">=3.0.0"
 
 [tool.poetry.scripts]
-toml-sort = 'toml_sort.cli:cli'
+pretty-toml-sort = 'pretty_toml_sort.cli:cli'
 
 [tool.tox]
 legacy_tox_ini = """
@@ -64,10 +67,10 @@ whitelist_externals = poetry
 skip_install = true
 commands =
   poetry install
-  poetry run black --check --diff toml_sort tests
-  poetry run docformatter --check --recursive toml_sort tests
-  poetry run isort --check toml_sort tests
-  poetry run mypy toml_sort
-  poetry run pylint toml_sort tests
+  poetry run black --check --diff pretty_toml_sort tests
+  poetry run docformatter --check --recursive pretty_toml_sort tests
+  poetry run isort --check pretty_toml_sort tests
+  poetry run mypy pretty_toml_sort
+  poetry run pylint pretty_toml_sort tests
   poetry run pytest -vv
 """

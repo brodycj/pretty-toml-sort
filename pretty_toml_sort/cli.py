@@ -188,9 +188,12 @@ def parse_sort_first(
 def get_parser(defaults: Dict[str, Any]) -> ArgumentParser:
     """Get the argument parser."""
     parser = ArgumentParser(
-        prog="toml-sort",
+        prog="pretty-toml-sort",
         formatter_class=argparse.RawDescriptionHelpFormatter,
-        description="Toml sort: a sorting utility for toml files.",
+        description=(
+            "Pretty TOML sort: a sorting utility for toml files "
+            """(with some "pretty" formatting)."""
+        ),
         epilog="""\
 Examples:
 

@@ -23,9 +23,9 @@ publish:  ## Build & publish the new version
 
 .PHONY: format
 format:  ## Autoformat all files in the repo. WARNING: changes files in-place
-	poetry run black toml_sort tests
-	poetry run isort toml_sort tests
-	poetry run docformatter --recursive --in-place toml_sort tests
+	poetry run black pretty_toml_sort tests
+	poetry run isort pretty_toml_sort tests
+	poetry run docformatter --recursive --in-place pretty_toml_sort tests
 
 .PHONY: build-docs
 build-docs: docs/autogen-requirements.txt  ## Build the Sphinx docs
@@ -35,7 +35,7 @@ build-docs: docs/autogen-requirements.txt  ## Build the Sphinx docs
 serve-docs: build-docs  ## Simple development server for Sphinx docs
 	@echo "Serving documentation locally."
 	@echo "Open browser with 'make open-docs'"
-	@find docs toml_sort | entr -ps "$(MAKE) build-docs"
+	@find docs pretty_toml_sort | entr -ps "$(MAKE) build-docs"
 
 .PHONY: open-docs
 open-docs:  ## Open Sphinx docs index in a browser

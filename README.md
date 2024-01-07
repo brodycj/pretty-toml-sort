@@ -1,19 +1,19 @@
-# toml-sort
+# pretty-toml-sort
 
-[![pypi-version](https://img.shields.io/pypi/v/toml-sort.svg)](https://python.org/pypi/toml-sort)
-[![license](https://img.shields.io/pypi/l/toml-sort.svg)](https://python.org/pypi/toml-sort)
-[![image-python-versions](https://img.shields.io/badge/python->=3.7-blue)](https://python.org/pypi/jedi-language-server)
-[![image-pypi-downloads](https://pepy.tech/badge/toml-sort)](https://pepy.tech/project/toml-sort)
-[![readthedocs-status](https://readthedocs.org/projects/toml-sort/badge/?version=latest)](https://toml-sort.readthedocs.io/en/latest/?badge=latest)
+An updated fork of `toml-sort` - forked from: https://github.com/pappasam/toml-sort
+
+LICENSE: [MIT](./LICENSE) <!-- TODO: RESTORE BADGES WITH CORRECT INFO -->
 
 A command line utility to sort and format your toml files.
 
-Read the latest documentation here: <https://toml-sort.readthedocs.io/en/latest/>
+with improvement: add inner spacing to inline objects (non-empty) - https://github.com/pappasam/toml-sort/pull/68
+
+<!-- TODO: UPDATED DOCUMENTATION -->
 
 ## Installation
 
 ```bash
-pip install toml-sort
+pip install pretty-toml-sort
 ```
 
 ## Motivation
@@ -32,15 +32,15 @@ I wrote this library/application because I couldn't find any "good" sorting util
 This project can be used as either a command line utility or a Python library. Read the docs for an overview of its library capabilities. For command line usage, see below:
 
 ```console
-$ toml-sort --help
-usage: toml-sort [-h] [--version] [-o OUTPUT] [-i] [-I] [-a] [--no-sort-tables] [--sort-table-keys]
-                 [--sort-inline-tables] [--sort-inline-arrays] [--sort-first KEYS] [--no-header] [--no-comments]
-                 [--no-header-comments] [--no-footer-comments] [--no-inline-comments] [--no-block-comments]
-                 [--spaces-before-inline-comment {1,2,3,4}] [--spaces-indent-inline-array {2,4,6,8}]
-                 [--trailing-comma-inline-array] [--check]
-                 [F ...]
+$ pretty-toml-sort --help
+usage: pretty-toml-sort [-h] [--version] [-o OUTPUT] [-i] [-I] [-a] [--no-sort-tables] [--sort-table-keys]
+                        [--sort-inline-tables] [--sort-inline-arrays] [--sort-first KEYS] [--no-header]
+                        [--no-comments] [--no-header-comments] [--no-footer-comments] [--no-inline-comments]
+                        [--no-block-comments] [--spaces-before-inline-comment {1,2,3,4}]
+                        [--spaces-indent-inline-array {2,4,6,8}] [--trailing-comma-inline-array] [--check]
+                        [F [F ...]]
 
-Toml sort: a sorting utility for toml files.
+Pretty TOML sort: a sorting utility for toml files (with some "pretty" formatting).
 
 positional arguments:
   F                     filename(s) to be processed by toml-sort (default: -)
@@ -300,6 +300,10 @@ dob = 1920-05-27T07:32:00Z # Another date!
 date = "2018"
 name = "Richard Stallman"
 ```
+
+## Python API
+
+TODO - need to generate and link to Python API documentation for this fork
 
 ## Local Development
 
