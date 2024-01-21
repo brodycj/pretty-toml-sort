@@ -185,7 +185,7 @@ def parse_sort_first(
     return sort_first, overrides
 
 
-def get_parser(defaults: Dict[str, Any]) -> ArgumentParser:
+def get_parser() -> ArgumentParser:
     """Get the argument parser."""
     parser = ArgumentParser(
         prog="pretty-toml-sort",
@@ -363,7 +363,6 @@ Notes:
         type=str,
         nargs="*",
     )
-    parser.set_defaults(**defaults)
     return parser
 
 
@@ -374,7 +373,9 @@ def cli(  # pylint: disable=too-many-branches,too-many-locals
     settings = load_pyproject()
     configuration = parse_config(settings)
     configuration_overrides = parse_config_overrides(settings)
-    args = get_parser(configuration).parse_args(
+    parser = get_parser()
+    parser.set_defaults(**configuration)
+    args = parser.parse_args(
         args=arguments
     )  # strip command itself
     if args.version:
