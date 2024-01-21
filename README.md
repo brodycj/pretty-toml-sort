@@ -1,5 +1,11 @@
 # pretty-toml-sort
 
+[![pypi-version](https://img.shields.io/pypi/v/pretty-toml-sort.svg)](https://python.org/pypi/pretty-toml-sort)
+[![license](https://img.shields.io/pypi/l/pretty-toml-sort.svg)](https://python.org/pypi/pretty-toml-sort)
+[![image-python-versions](https://img.shields.io/badge/python->=3.7-blue)](https://python.org/pypi/jedi-language-server)
+[![image-pypi-downloads](https://pepy.tech/badge/pretty-toml-sort)](https://pepy.tech/project/pretty-toml-sort)
+[![readthedocs-status](https://readthedocs.org/projects/pretty-toml-sort/badge/?version=latest)](https://pretty-toml-sort.readthedocs.io/en/latest/?badge=latest)
+
 An updated fork of `toml-sort` - forked from: https://github.com/pappasam/toml-sort
 
 LICENSE: [MIT](./LICENSE) <!-- TODO: RESTORE BADGES WITH CORRECT INFO -->
