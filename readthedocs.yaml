@@ -10,4 +10,4 @@ sphinx:
 formats: all
 python:
   install:
-    - requirements: docs/autogen-requirements.txt
+    - requirements: docs/requirements.txt
