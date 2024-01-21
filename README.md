@@ -5,6 +5,7 @@
 [![image-python-versions](https://img.shields.io/badge/python->=3.7-blue)](https://python.org/pypi/jedi-language-server)
 [![image-pypi-downloads](https://pepy.tech/badge/pretty-toml-sort)](https://pepy.tech/project/pretty-toml-sort)
 [![readthedocs-status](https://readthedocs.org/projects/pretty-toml-sort/badge/?version=latest)](https://pretty-toml-sort.readthedocs.io/latest/)
+[![GitHub issues](https://img.shields.io/github/issues/brodybits/pretty-toml-sort)](https://github.com/brodybits/pretty-toml-sort/issues)
 
 An updated fork of `toml-sort` - forked from: https://github.com/pappasam/toml-sort
 
