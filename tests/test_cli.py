@@ -428,9 +428,10 @@ def test_parse_sort_first(arg, expected_first, expected_overrides):
     assert first == expected_first
     assert overrides == expected_overrides
 
+
 def test_version():
-    with open('pyproject.toml') as f:
+    with open("pyproject.toml") as f:
         doc = tomlkit.loads(f.read())
-        expected = doc.value['tool']['poetry']['version'] + '\n'
+        expected = doc.value["tool"]["poetry"]["version"] + "\n"
     result = capture(["pretty-toml-sort", "--version"])
     assert result.stdout == expected
