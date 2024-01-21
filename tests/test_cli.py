@@ -10,6 +10,8 @@ from unittest import mock
 
 import pytest
 
+import tomlkit
+
 from pretty_toml_sort import cli
 from pretty_toml_sort.cli import parse_sort_first
 from pretty_toml_sort.tomlsort import SortOverrideConfiguration
@@ -425,3 +427,10 @@ def test_parse_sort_first(arg, expected_first, expected_overrides):
     first, overrides = parse_sort_first(arg, {})
     assert first == expected_first
     assert overrides == expected_overrides
+
+def test_version():
+    with open('pyproject.toml') as f:
+        doc = tomlkit.loads(f.read())
+        expected = doc.value['tool']['poetry']['version'] + '\n'
+    result = capture(["pretty-toml-sort", "--version"])
+    assert result.stdout == expected
