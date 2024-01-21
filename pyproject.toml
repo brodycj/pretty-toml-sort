@@ -56,10 +56,6 @@ pytest-cov = ">=3.0.0"
 [tool.poetry.scripts]
 pretty-toml-sort = 'pretty_toml_sort.cli:cli'
 
-[tool.poetry.group.dev.dependencies]
-mypy = "^1.4"
-typing-extensions = "^4.7"
-
 [tool.tox]
 legacy_tox_ini = """
 [tox]
