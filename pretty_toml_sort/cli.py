@@ -375,9 +375,7 @@ def cli(  # pylint: disable=too-many-branches,too-many-locals
     configuration_overrides = parse_config_overrides(settings)
     parser = get_parser()
     parser.set_defaults(**configuration)
-    args = parser.parse_args(
-        args=arguments
-    )  # strip command itself
+    args = parser.parse_args(args=arguments)  # strip command itself
     if args.version:
         print(get_version())
         sys.exit(0)
