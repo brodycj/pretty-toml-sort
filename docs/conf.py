@@ -16,6 +16,10 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+# -- metadata import
+
+import importlib.metadata
+
 # -- Project information -----------------------------------------------------
 
 project = "pretty-toml-sort"
@@ -23,7 +27,8 @@ copyright = "2019, Samuel Roeca; 2024-preset Christopher J. Brody"  # pylint: di
 author = "Samuel Roeca"
 
 # The full version, including alpha/beta/rc tags
-release = "0.17.0"
+# (from the metadata)
+release = importlib.metadata.version('pretty-toml-sort')
 
 # -- General configuration ---------------------------------------------------
 master_doc = "index"
