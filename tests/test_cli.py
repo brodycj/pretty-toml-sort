@@ -9,7 +9,6 @@ from typing import Callable, List, NamedTuple, Optional
 from unittest import mock
 
 import pytest
-
 import tomlkit
 
 from pretty_toml_sort import cli
