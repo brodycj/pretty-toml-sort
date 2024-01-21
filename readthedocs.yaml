@@ -11,3 +11,5 @@ formats: all
 python:
   install:
     - requirements: docs/autogen-requirements.txt
+    - method: pip
+      path: .
