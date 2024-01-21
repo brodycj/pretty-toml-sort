@@ -18,8 +18,8 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "toml-sort"
-copyright = "2019, Samuel Roeca"  # pylint: disable=redefined-builtin
+project = "pretty-toml-sort"
+copyright = "2019, Samuel Roeca; 2024-preset Christopher J. Brody"  # pylint: disable=redefined-builtin
 author = "Samuel Roeca"
 
 # The full version, including alpha/beta/rc tags
