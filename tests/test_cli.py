@@ -428,7 +428,7 @@ def test_parse_sort_first(arg, expected_first, expected_overrides):
     assert overrides == expected_overrides
 
 
-def test_version():
+def test_cli_version():
     """Test that `pretty-toml-sort --version` returns correct value."""
     with open("pyproject.toml", encoding="UTF-8") as pyproject_toml_file:
         doc = tomlkit.loads(pyproject_toml_file.read())
