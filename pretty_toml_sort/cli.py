@@ -44,7 +44,7 @@ def get_version() -> str:
                 file=sys.stderr,
             )
             sys.exit(1)
-    return version("toml-sort")
+    return version("pretty-toml-sort")
 
 
 def printerr(arg: str) -> None:
