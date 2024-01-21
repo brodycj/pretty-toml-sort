@@ -430,7 +430,7 @@ def test_parse_sort_first(arg, expected_first, expected_overrides):
 
 def test_version():
     """Test that `pretty-toml-sort --version` returns correct value."""
-    with open("pyproject.toml") as pyproject_toml_file:
+    with open("pyproject.toml", encoding="UTF-8") as pyproject_toml_file:
         doc = tomlkit.loads(pyproject_toml_file.read())
         expected = doc.value["tool"]["poetry"]["version"] + "\n"
     result = capture(["pretty-toml-sort", "--version"])
